@@ -25,6 +25,8 @@ INSTALL(
 
 # Orocos convention:
 CONFIGURE_FILE( orocos-kdl.pc.in ${CMAKE_CURRENT_BINARY_DIR}/orocos-kdl.pc @ONLY)
+# ROS convention
+CONFIGURE_FILE( orocos-kdl.pc.in ${CMAKE_CURRENT_BINARY_DIR}/orocos_kdl.pc @ONLY)
 
 INSTALL(
   FILES ${CMAKE_CURRENT_BINARY_DIR}/orocos-kdl.pc

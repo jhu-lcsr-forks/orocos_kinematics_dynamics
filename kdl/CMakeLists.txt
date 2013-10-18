@@ -89,6 +89,10 @@ CONFIGURE_FILE(
 INSTALL(
   FILES ${CMAKE_CURRENT_BINARY_DIR}/orocos-kdl-config.cmake 
   DESTINATION share/orocos-kdl)
+INSTALL(
+  FILES ${CMAKE_CURRENT_BINARY_DIR}/orocos-kdl-config.cmake 
+  RENAME orocos_kdl-config.cmake
+  DESTINATION share/orocos_kdl)
 
 INSTALL(
   FILES ${CMAKE_CURRENT_SOURCE_DIR}/package.xml
