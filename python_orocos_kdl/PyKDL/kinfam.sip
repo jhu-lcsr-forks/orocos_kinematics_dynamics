@@ -66,8 +66,14 @@ class RotationalInertia
 using namespace KDL;
 %End
 public:
-    RotationalInertia(double Ixx=0,double Iyy=0,double Izz=0,double Ixy=0,double Ixz=0,double Iyz=0);
+    RotationalInertia(double Ixx=0,double Iyy=0,double Izz=0,double Ixy=0,double Ixz=0,double Iyz=0)/KeywordArgs="Optional"/;
         
+    double getIxx();
+    double getIyy();
+    double getIzz();
+    double getIxy();
+    double getIxz();
+    double getIyz();
     static RotationalInertia Zero()/Factory/;
     Vector operator*(Vector omega) const /Factory/;
 };
@@ -83,7 +89,7 @@ class RigidBodyInertia
 using namespace KDL;
 %End
 public:
-    RigidBodyInertia(double m=0, const Vector& oc=Vector::Zero(), const RotationalInertia& Ic=RotationalInertia::Zero());
+    RigidBodyInertia(double m=0, const Vector& oc=Vector::Zero(), const RotationalInertia& Ic=RotationalInertia::Zero())/KeywordArgs="Optional"/;
     static RigidBodyInertia Zero() /Factory/;        
     RigidBodyInertia RefPoint(const Vector& p) /Factory/;
     double getMass()const /Factory/;        

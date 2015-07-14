@@ -63,6 +63,13 @@ namespace KDL
         friend RigidBodyInertia operator*(const Rotation& R,const RigidBodyInertia& I);
 
         double data[9];
+
+        double getIxx() { return data[0]; }
+        double getIyy() { return data[4]; }
+        double getIzz() { return data[8]; }
+        double getIxy() { return data[1]; }
+        double getIxz() { return data[2]; }
+        double getIyz() { return data[5]; }
 	};
 
 }
