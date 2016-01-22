@@ -72,6 +72,9 @@ namespace KDL
         double getIyz() { return data[5]; }
 	};
 
+    RotationalInertia operator*(double a, const RotationalInertia& I);
+    RotationalInertia operator+(const RotationalInertia& Ia, const RotationalInertia& Ib);
+
 }
 
 #endif
