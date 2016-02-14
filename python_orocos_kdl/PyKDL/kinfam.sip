@@ -548,3 +548,23 @@ public:
 };
 
 
+class TreeFkSolverPos
+{
+%TypeHeaderCode
+#include <kdl/treefksolver.hpp>
+using namespace KDL;
+%End
+    virtual int JntToCart(const JntArray& q_in, Frame& p_out, std::string segmentName)=0;
+};
+
+class TreeFkSolverPos_recursive : TreeFkSolverPos
+{
+%TypeHeaderCode
+#include <kdl/treefksolverpos_recursive.hpp>
+using namespace KDL;
+%End
+
+public:
+    TreeFkSolverPos_recursive(const Tree& tree);
+    virtual int JntToCart(const JntArray& q_in, Frame& p_out, std::string segmentName);
+};
