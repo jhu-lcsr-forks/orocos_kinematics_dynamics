@@ -508,6 +508,19 @@ public:
     virtual int CartToJnt(const JntArray& q_init , const Frame& p_in ,JntArray& q_out);
 };
 
+class ChainIkSolverPos_LMA_JL_Mimic : ChainIkSolverPos
+{
+%TypeHeaderCode
+#include <kdl/chainiksolverpos_lma_jl_mimic.hpp>
+using namespace KDL;
+%End
+public:
+    ChainIkSolverPos_LMA_JL_Mimic(const Chain& chain,const JntArray& q_min, const JntArray& q_max, ChainFkSolverPos& fksolver,ChainIkSolverPos_LMA& iksolver,unsigned int maxiter=100,double eps=1e-6, bool position_ik = false);
+
+    virtual int CartToJnt(const JntArray& q_init , const Frame& p_in ,JntArray& q_out);
+    virtual int CartToJntAdvanced(const JntArray& q_init, const Frame& p_in, JntArray& q_out, bool lock_redundant_joints);
+};
+
 
 class ChainIkSolverVel_pinv_nso : ChainIkSolverVel
 {

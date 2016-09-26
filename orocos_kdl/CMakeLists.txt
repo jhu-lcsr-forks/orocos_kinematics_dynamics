@@ -34,7 +34,7 @@ SET(CMAKE_VERSION "${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}.${CMAKE_PATCH_V
 
 
 IF ( NOT CMAKE_BUILD_TYPE )
-  SET(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel." FORCE)
+  SET(CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING "Choose the type of build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel." FORCE)
   MESSAGE( "Setting build type to '${CMAKE_BUILD_TYPE}'" )
 ELSE ( NOT CMAKE_BUILD_TYPE )
   MESSAGE( "Build type set to '${CMAKE_BUILD_TYPE}' by user." )
